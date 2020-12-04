@@ -7,7 +7,7 @@
  ~$WheelUp:: 
     MouseGetPos,, yaxis
     ToolTip, %yaxis%, , ,
-    IfGreater,yaxis,40, Return 
+    
     IfEqual,A_ThisHotkey,~$WheelDown, Send ^{PgDn} 
                                  Else Send ^{PgUp} 
 Return 
