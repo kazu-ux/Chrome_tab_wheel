@@ -1,0 +1,14 @@
+;; Wheel Scroll Tabs for Google Chrome 
+
+;変数を呼び出す際は、%変数名%にする
+
+#IfWinActive ahk_exe chrome.exe
+ ~$WheelDown:: 
+ ~$WheelUp:: 
+    MouseGetPos,, yaxis
+    ToolTip, %yaxis%, , ,
+    IfGreater,yaxis,40, Return 
+    IfEqual,A_ThisHotkey,~$WheelDown, Send ^{PgDn} 
+                                 Else Send ^{PgUp} 
+Return 
+#IfWinActive
